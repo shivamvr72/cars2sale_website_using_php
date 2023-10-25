@@ -1,0 +1,35 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.admin-panel {
+    background-color: #6a0dad; 
+    color: #fff;
+    padding: 20px;
+}
+
+.admin-panel h1, .admin-panel h2 {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    color: #fff;
+}

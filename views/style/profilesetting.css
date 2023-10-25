@@ -1,0 +1,43 @@
+h1 {
+    font-size: 36px;
+    color: #fff; 
+}
+form {
+    background-color: #fff;
+    padding: 30px 40px 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 100%; 
+    font-family: inherit;
+}
+input:hover, textarea:hover {
+    border: 1px solid #000;
+}
+button {
+    background-color: #9932CC;
+    color: #fff;
+    border: none;
+    padding: 11px 30px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

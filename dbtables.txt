@@ -1,0 +1,89 @@
+#database 
+cars2sale
+
+#user table 
+CREATE TABLE users(
+user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+user_uid tinytext,
+user_password longtext,
+user_email text 
+);
+
+
+#user profile table
+CREATE TABLE profiles (
+    profiles_id INT AUTO_INCREMENT NOT NULL,
+    profile_about TEXT NOT NULL,
+    profile_introtitle TEXT NOT NULL,
+    profile_introtext TEXT NOT NULL   ,
+    user_id int,
+    PRIMARY KEY (profiles_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+#admin table
+CREATE TABLE useradmin(
+admin_aid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+admin_uid tinytext,
+admin_password longtext,
+admin_email text 
+);
+
+#admin profile
+CREATE TABLE adminprofiles (
+    adminprofiles_id INT AUTO_INCREMENT NOT NULL,
+    adminprofile_about TEXT NOT NULL,
+    adminprofile_introtitle TEXT NOT NULL,
+    adminprofile_introtext TEXT NOT NULL,
+    admin_aid INT,
+    PRIMARY KEY (adminprofiles_id),
+    FOREIGN KEY (admin_aid) REFERENCES adminuser(admin_aid)
+);
+
+#cars table when it put on sale
+CREATE TABLE cars (
+    carid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    seller VARCHAR(50) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    year VARCHAR(10) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    fuel VARCHAR(15) NOT NULL,
+    transmission VARCHAR(20) NOT NULL,
+    price INT NOT NULL,
+    contact INT NOT NULL,
+    image VARCHAR(300) NOT NULL,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+#table for finance 
+CREATE TABLE fianance(
+    fid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    bank_name VARCHAR(50) NOT NULL,
+    acno VARCHAR(10) NOT NULL,
+    carno VARCHAR(50) NOT NULL,
+    adhno VARCHAR(15) NOT NULL,
+    contact_number VARCHAR(15) NOT NULL,
+    user_id int,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+CREATE TABLE buycar(
+    bid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    carbrand VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    year VARCHAR(10) NOT NULL,
+    fuel VARCHAR(15) NOT NULL,
+    transmission VARCHAR(15) NOT NULL,
+    price int(15) NOT NULL,
+    user_id int,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+
